@@ -98,12 +98,6 @@ class AddRenderStudioOperator(bpy.types.Operator):
 
         return {'FINISHED'}
 
-class ToggleEditModeOperator(bpy.types.Operator):
-    bl_idname = "scene.toggle_edit_mode_operator"
-    bl_label = "Toggle Edit Mode"
-    def execute(self, context):
-        bpy.ops.object.editmode_toggle()
-
 class RenderStudioPanel(bpy.types.Panel):
     bl_label = "Create"
     bl_idname = "RS_PT_CREAT"
@@ -265,5 +259,3 @@ def unregister():
 if __name__ == "__main__":
     register()
 
-if __name__ != "__main__":
-    unregister()
